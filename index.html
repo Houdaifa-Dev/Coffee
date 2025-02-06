@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee spot</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon"
+    href="purepng.com-coffee-beanscoffee-beanscoffeestone-fruitpeaberry-1411527241519iq7rh-removebg-preview.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    section .txt {
+      font-size: 19px;
+      font-weight: 400;
+      color: #64431e;
+      animation: slideRight 3s ease forwards;
+      animation-delay: 0s;
+      animation-play-state: paused;
+    }
+
+
+    section .txt.show {
+      animation-play-state: running;
+    }
+
+    .section2 {
+      top: 950px;
+      width: 100%;
+      height: 180vh;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      justify-content: space-evenly;
+      animation: slidebottom 5s ease forwards;
+      animation-delay: 0s;
+      animation-play-state: paused;
+    }
+
+    .section2.show {
+      animation-play-state: running;
+    }
+
+    .type {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      position: relative;
+      top: 1150px;
+      height: 50vh;
+      background: url("pexels-rachel-claire-5865209.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      z-index: 1;
+      animation: slideleft 2s ease forwards;
+      animation-delay: 0s;
+      animation-play-state: paused;
+    }
+
+    .type.show {
+      animation-play-state: running;
+    }
+
+    .type .s1 {
+      padding: 20px;
+      width: 30%;
+      backdrop-filter: blur(9px);
+      border: 5px #ffbf00 solid;
+      border-radius: 10px;
+      color: rgb(255, 255, 255);
+      font-weight: 900;
+      font-size: 48px;
+      text-align: center;
+      transition: 0.7s ease-out;
+      animation: zoomin 2.5s ease forwards;
+      animation-delay: 0s;
+      animation-play-state: paused;
+    }
+
+    .type .s1.show {
+      animation-play-state: running;
+    }
+
+    .type .s1:hover {
+
+      backdrop-filter: blur(4px);
+      border: 5px #2d2c2acc solid;
+      transform: scale(1.1);
+
+    }
+
+    .menu {
+      width: 100%;
+      position: relative;
+      top: 1200px;
+      height: 90vh;
+      background: white;
+      display: flex;
+      flex-direction: column;
+      animation: slideleft 2.5s ease forwards;
+      animation-delay: 0s;
+      animation-play-state: paused;
+    }
+
+    .menu.show {
+      animation-play-state: running;
+    }
+
+    .menu .p1 {
+      margin-bottom: -100px;
+      animation: slideRight 4.5s ease forwards;
+      animation-delay: 0s;
+      animation-play-state: paused;
+    }
+
+    .menu .p1.show {
+      animation-play-state: running;
+    }
+
+    .menu .img2 {
+      width: 500px;
+      height: 540px;
+      position: relative;
+      border-radius: 8px;
+      top: -500px;
+      left: 900px;
+      animation: slidebottom 4s ease forwards;
+      animation-delay: 0s;
+      animation-play-state: paused;
+    }
+
+    .menu .img2.show {
+      animation-play-state: running;
+    }
+
+    .touch {
+      width: 70%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      top: 1250px;
+      gap: 20px;
+      left: 15%;
+      animation: slidebottom 5s ease forwards;
+      animation-delay: 0s;
+      animation-play-state: paused;
+    }
+
+    .touch.show {
+      animation-play-state: running;
+    }
+
+    .titletouch {
+      width: 100%;
+      height: 65px;
+      position: relative;
+      top: 1200px;
+      display: flex;
+      color: #706920;
+      justify-content: center;
+      align-items: center;
+      animation: slideTop 4.2s ease forwards;
+      animation-delay: 0s;
+      animation-play-state: paused;
+    }
+
+    .titletouch.show {
+      animation-play-state: running;
+    }
+
+    .footer .about {
+      position: relative;
+      width: 440px;
+      top: 30px;
+      flex-direction: column;
+      overflow: hidden;
+      display: flex;
+      transition: 2s ease-out;
+      padding: 30px 20px 30px 20px;
+      border-right: #fff 1px solid;
+      border-bottom: #fff 1px solid;
+      gap: 30px;
+      border-radius: 4px;
+      left: 45px;
+      animation: slideTop 4.2s ease forwards;
+      animation-delay: 0s;
+      animation-play-state: paused;
+    }
+
+    .footer .about::after {
+      content: '';
+      position: absolute;
+      width: 150px;
+      height: 3px;
+      background: red;
+      top: 60px;
+      left: 20px;
+    }
+
+    .footer .about.show {
+      animation-play-state: running;
+    }
+
+    .footer .time {
+      position: relative;
+      width: 440px;
+      top: 30px;
+      flex-direction: column;
+      display: flex;
+      padding: 30px 20px 30px 20px;
+      border: #fff 1px solid;
+      gap: 30px;
+      border-radius: 4px;
+      left: 45px;
+      transition: 2s ease-out;
+      animation: slidebottom 4.2s ease forwards;
+      animation-delay: 0s;
+      animation-play-state: paused;
+    }
+
+    .footer .time::after {
+      content: '';
+      position: absolute;
+      width: 250px;
+      height: 3px;
+      background: red;
+      top: 60px;
+      left: 20px;
+    }
+
+    .footer .time.show {
+      animation-play-state: running;
+    }
+
+    .footer .info .social-icons {
+      display: flex;
+      gap: 20px;
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      top: 235px;
+      left: 80px;
+      animation: slideTop 3s ease forwards;
+      animation-delay: 0s;
+      animation-play-state: paused;
+    }
+
+    .footer .info .social-icons.show {
+      animation-play-state: running;
+    }
+
+    .footer .info .invit {
+      width: 290px;
+      height: 170px;
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 200px;
+      gap: 32px;
+      animation: slideleft 2.5s ease forwards;
+      animation-delay: 0s;
+      animation-play-state: paused;
+    }
+
+    .footer .info .invit::after {
+      content: '';
+      position: absolute;
+      width: 120px;
+      height: 3px;
+      background: red;
+      top: 50px;
+      left: 0px;
+
+
+    }
+
+    .footer .info .invit.show {
+      animation-play-state: running;
+    }
+
+    @keyframes slideTop {
+      0% {
+        opacity: 0;
+        transform: translateY(100px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideRight {
+      0% {
+        opacity: 0;
+        transform: translateX(-100px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideleft {
+      0% {
+        opacity: 0;
+        transform: translateX(100px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slidebottom {
+      0% {
+        opacity: 0;
+        transform: translateY(-100px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes floatimage {
+      0% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-24px);
+      }
+
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes zoomin {
+      0% {
+        opacity: 0;
+        transform: scale(0)
+      }
+
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="wrapper">
+      <div class="logo"><a href="#">Coffee</a></div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li>
+          <a href="#" class="desktop-item">Porfolio</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="bod boda">
+    <h1>
+      It is coffee Time <br>
+      Coffee a day <br>keeps the angry away .</h1>
+    <button>Learn more</button>
+  </div>
+
+  <section>
+    <div class="txt">
+      <h1 style="color: rgb(92, 59, 30);font-size: xx-large;">About us</h1><br>Lorem ipsum dolor, sit amet consectetur
+      <br>adipisicing elit. Ipsa pariatur beatae quae <br>praesentium dolores facilis ratet magni optio<br>
+    </div>
+    <div class="img"><img style="margin-left: 45px;border-radius: 12px;" src="pexels-jayoke-851555.jpg" width="500px"
+        height="400px" alt="coffee is ready"></div>
+    <div id="btn1">
+      <button>Learn more</button>
+    </div>
+  </section>
+
+
+  <div class="tit">
+    <h1>Galery</h1>
+  </div>
+  <section class="section2 section2a">
+    <img src="pexels-shameel-mukkath-3421394-5112573.jpg">
+    <img src="pexels-skyler-ewing-266953-8909323.jpg">
+    <img src="pexels-mateusz-dach-99805-362137.jpg">
+  </section>
+
+  <div class="type typea">
+
+    <div class="s1 s1a">30156<br>Coffee served</div>
+    <div class="s1 s1a">21 <br> type of coffee</div>
+    <div class="s1 s1a">10<br>Team members</div>
+  </div>
+
+  <div class="menubar menubar1">Menu</div>
+  <div class="menu menu1">
+    <div class="p1"><img src="pexels-designbyja-1113500-2109099.jpg">
+      <h3>Lemon juice </h3><br>
+      <h4>fresh and tasety drink</h4>
+      <h1>3.5 $</h1>
+    </div>
+
+    <div class="p1"><img src="pexels-jaxie-jia-80193927-8876154.jpg">
+      <h3>Honey cake </h3><br>
+      <h4>delicious cake</h4>
+      <h1>5.5 $</h1>
+    </div>
+
+    <div class="p1"><img src="pexels-vojtech-okenka-127162-1055272.jpg">
+      <h3> Chocolate cupcake </h3><br>
+      <h4>with red strawberry toppings</h4>
+      <h1 style="margin-left:100px;">1.5 $</h1>
+    </div>
+
+    <img class="img2" src="pexels-julieaagaard-2467287.jpg">
+  </div>
+  <div class="fedbacktitle fedbacktitle1">
+    <h1>Costumers Comments</h1>
+  </div>
+
+  <div class="feed feeda">
+
+    <div class="feed1 feed1a">
+      <div class="img"><img src="pexels-chloekalaartist-1043474.jpg"></div>
+      <div class="p pa">
+        <h2>John Rico </h2>
+        <p>THE GOAT , i gotta tell u , they have the best coffee in this city , now i am a little
+          bit confused , shall i buy one coffee or more ? i wanna live in this place .
+        </p>
+        <div>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="feed2">
+      <div class="img"><img src="pexels-divinetechygirl-1181424.jpg"></div>
+      <div class="p">
+        <h2>Linda Hilary</h2>
+        <p>WoW I love this place ! service and hight quality are amazing , also team members are very freindly
+          and prices ! what a suprise , also they have free dilevery around the city ... i just love it .</p>
+        <div>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <div class="titletouch titletoucha">
+    <h1>Get In Touch</h1>
+  </div>
+  <form class="touch toucha">
+    <div class="namemail namemaila">
+      <input type="text" placeholder="Name" name="name">
+      <input type="email" placeholder="Email" name="email">
+    </div>
+    <input type="text" placeholder="subject" name="subject">
+    <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Message"></textarea>
+    <button>Send</button>
+  </form>
+  <div class="map mapa">
+    <h1>Our Location</h1>
+  </div>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25760.26704751045!2d5.378352774316413!3d36.19007000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12f315a223979673%3A0x74bfbe895c645cd!2zQ2Fmw6kgT3DDqXJh!5e0!3m2!1sen!2sdz!4v1738311110001!5m2!1sen!2sdz"
+    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+
+  <!----------Footer------------>
+  <footer class="footer footera">
+    <h1>What Do You Think ?</h1>
+    <div class="info infoa">
+      <div class="about abouta">
+        <h2>About Us</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum deserunt doloremque odio commodi omnis
+          voluptate earum reprehenderit mollitia fuga optio.</p>
+      </div>
+      <div class="time timea">
+        <h2>Opening Hours</h2>
+        <p> Mon-Fri: 08.00 A.M - 10.00 P.M
+          Saturday: 08.00 A.M - 02.00 P.M
+          Sunday: Closed
+          Half-Holidays: 08.00 A.M - 02.00 P.M
+          Twe: 08.00 A.M - 02.00 P.M</p>
+      </div>
+      <div class="invit invita">
+        <h2>Join Us</h2>
+        <p>Join us at Coffee Spot for a cozy experience and the perfect cup of coffee.
+          Come sip, relax, and enjoy—your seat is waiting! </p>
+      </div>
+      <div class="social-icons social-iconsa">
+        <a href="https://www.facebook.com" target="_blank">
+          <i id="i1" class='bx bxl-facebook'></i>
+        </a>
+        <a href="https://www.instagram.com" target="_blank">
+          <i id="i2" class='bx bxl-instagram'></i>
+        </a>
+        <a href="https://www.linkedin.com" target="_blank">
+          <i id="i3" class='bx bxl-linkedin'></i>
+        </a>
+      </div>
+
+
+    </div>
+    <div class="cop">
+      Copyright © 2024 All Rights Reserved by Houdaifa Bensaadi.
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    const boxestxt = document.querySelectorAll('.txt');
+    window.addEventListener('scroll', () => {
+      boxestxt.forEach(box => {
+        const boxTop = box.getBoundingClientRect().top;
+        const triggerPoint = window.innerHeight - 100;
+
+        if (boxTop < triggerPoint) {
+          box.classList.add('show');
+        }
+      });
+    });
+    const boxessection2 = document.querySelectorAll('.section2');
+    window.addEventListener('scroll', () => {
+      boxessection2.forEach(box => {
+        const boxTop = box.getBoundingClientRect().top;
+        const triggerPoint = window.innerHeight - 100;
+
+        if (boxTop < triggerPoint) {
+          box.classList.add('show');
+        }
+      });
+    });
+    const boxestype = document.querySelectorAll('.type');
+    window.addEventListener('scroll', () => {
+      boxestype.forEach(box => {
+        const boxTop = box.getBoundingClientRect().top;
+        const triggerPoint = window.innerHeight - 100;
+
+        if (boxTop < triggerPoint) {
+          box.classList.add('show');
+        }
+      });
+    });
+    const boxestypes1 = document.querySelectorAll('.type .s1');
+    window.addEventListener('scroll', () => {
+      boxestypes1.forEach(box => {
+        const boxTop = box.getBoundingClientRect().top;
+        const triggerPoint = window.innerHeight - 100;
+
+        if (boxTop < triggerPoint) {
+          box.classList.add('show');
+        }
+      });
+    });
+    const boxesmenu = document.querySelectorAll('.menu');
+    window.addEventListener('scroll', () => {
+      boxesmenu.forEach(box => {
+        const boxTop = box.getBoundingClientRect().top;
+        const triggerPoint = window.innerHeight - 100;
+
+        if (boxTop < triggerPoint) {
+          box.classList.add('show');
+        }
+      });
+    });
+    const boxesmenup1 = document.querySelectorAll('.menu .p1');
+    window.addEventListener('scroll', () => {
+      boxesmenup1.forEach(box => {
+        const boxTop = box.getBoundingClientRect().top;
+        const triggerPoint = window.innerHeight - 100;
+
+        if (boxTop < triggerPoint) {
+          box.classList.add('show');
+        }
+      });
+    });
+    const boxesmenuimg2 = document.querySelectorAll('.menu .img2');
+    window.addEventListener('scroll', () => {
+      boxesmenuimg2.forEach(box => {
+        const boxTop = box.getBoundingClientRect().top;
+        const triggerPoint = window.innerHeight - 100;
+
+        if (boxTop < triggerPoint) {
+          box.classList.add('show');
+        }
+      });
+    });
+    const boxestouch = document.querySelectorAll('.touch');
+    window.addEventListener('scroll', () => {
+      boxestouch.forEach(box => {
+        const boxTop = box.getBoundingClientRect().top;
+        const triggerPoint = window.innerHeight - 100;
+
+        if (boxTop < triggerPoint) {
+          box.classList.add('show');
+        }
+      });
+    });
+    const boxestitletouch = document.querySelectorAll('.titletouch');
+    window.addEventListener('scroll', () => {
+      boxestitletouch.forEach(box => {
+        const boxTop = box.getBoundingClientRect().top;
+        const triggerPoint = window.innerHeight - 100;
+
+        if (boxTop < triggerPoint) {
+          box.classList.add('show');
+        }
+      });
+    });
+    const boxesabout = document.querySelectorAll('.footer .about');
+    window.addEventListener('scroll', () => {
+      boxesabout.forEach(box => {
+        const boxTop = box.getBoundingClientRect().top;
+        const triggerPoint = window.innerHeight - 100;
+
+        if (boxTop < triggerPoint) {
+          box.classList.add('show');
+        }
+      });
+    });
+    const boxestime = document.querySelectorAll('.footer .time');
+    window.addEventListener('scroll', () => {
+      boxestime.forEach(box => {
+        const boxTop = box.getBoundingClientRect().top;
+        const triggerPoint = window.innerHeight - 100;
+
+        if (boxTop < triggerPoint) {
+          box.classList.add('show');
+        }
+      });
+    });
+    const boxessocial = document.querySelectorAll('.footer .info .social-icons');
+    window.addEventListener('scroll', () => {
+      boxessocial.forEach(box => {
+        const boxTop = box.getBoundingClientRect().top;
+        const triggerPoint = window.innerHeight - 100;
+
+        if (boxTop < triggerPoint) {
+          box.classList.add('show');
+        }
+      });
+    });
+    const boxesinvit = document.querySelectorAll('.footer .info .invit');
+    window.addEventListener('scroll', () => {
+      boxesinvit.forEach(box => {
+        const boxTop = box.getBoundingClientRect().top;
+        const triggerPoint = window.innerHeight - 100;
+
+        if (boxTop < triggerPoint) {
+          box.classList.add('show');
+        }
+      });
+    });
+
+
+
+
+
+
+
+
+
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
