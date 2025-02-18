@@ -847,20 +847,22 @@ iframe {
 }
 
 /*----------------------  responsive design-------------------------------*/
-@media screen and (max-width: 756px) {
+@media screen and (max-width: 760px) {
   .section2a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
     padding: 100px 20px 100px 20px;
-    margin-top: -340px;
+    margin-top: -340px;left:200px;
     gap: 1px;
   }
-
+.tito {
+  width: 400%;
+}
   .section2a img {
-    width: 85%;
-    height: 300px;
+    width: 200vh;
+    height: 380px;
     margin-left: 20px;
   }
 
@@ -875,7 +877,7 @@ iframe {
 
   .boda {
     display: flex;
-    width: 100%;
+    width: 500%;
     height: 700px;
     background: url("free-photo-of-hot-drink-in-close-up-photography.jpeg");
     background-position: right 35% bottom 45%;
@@ -892,10 +894,10 @@ iframe {
 
   .boda button {
     position: relative;
-    width: 190px;
+    width: 230px;
     height: 65px;
-    left: -290px;
-    top: 400px;
+    left:-240px;
+    top: 420px;
     font-size: large;
 
   }
@@ -917,16 +919,29 @@ iframe {
   }
 
   .typea {
+    width: 500%;
+    position: relative;
+    top: 1150px;
+    height: 50vh;
+    background: url("pexels-rachel-claire-5865209.jpg");
+    
+    background-size: contain;
+    background-position: center;
+ 
+
+    width: 100%;
     margin-top: -200px;
 
   }
-
+iframe{
+width: 500%;
+}
   .typea .s1a {
     display: none;
   }
 
 
-  .mapa {
+  .mapa {width: 400%;
     margin-top: 100px;
   }
 
@@ -1012,7 +1027,7 @@ iframe {
   }
 
   .toucha {
-    top: 1000px;
+    top: 1000px;width: 500%;
   }
 
   .titletoucha h1 {
@@ -1020,8 +1035,9 @@ iframe {
   }
 
   .titletoucha {
+    width: 500%;
     background: #6c4e0e;
-    margin-top: -200px;
+    
   }
 
   .toucha button {
@@ -1045,21 +1061,10 @@ iframe {
     font-size: medium;
   }
 
-  .footer .cop {
-    width: 70%;
-    position: absolute;
-    top: 550px;
-    left: 80px;
-    display: flex;
-    color: #ff1100;
-    font-size: 14px;margin-top: 430px;
-    font-weight: 500;
-    justify-content: center;
-    height: 25px;
-  }
+
 
   .footera {
-    width: 100%;
+    width: 500%;
     height: 150vh;
   }
 
